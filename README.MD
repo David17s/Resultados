@@ -1,87 +1,97 @@
-# 🎥 Video Extractor Project
+Evaluation of Graph-Based Methods for Rectangle Detection in Images
 
-Este repositorio contiene un conjunto de herramientas para la extracción, análisis y detección de objetos rectangulares en videos. 
-Los módulos están ubicados en `src/video_extractor/`, cada uno con una funcionalidad específica.
+This repository contains a set of tools for the extraction, analysis, and detection of rectangular objects in videos. The modules are located in src/video_extractor/, each one providing a specific functionality.
 
----
-## 📚 Referencias
+📚 References
 
-Este proyecto toma como base parte del trabajo publicado en el siguiente repositorio:
+This project is partially based on the work published in the following repository:
 
-- 🔗 [Detector de rectángulos mediante Ridge - Proyecto TFM de Neathle](https://github.com/Neathle/TFM)
+🔗 Rectangle Detector using Ridge – TFM Project by Neathle
+Special thanks to the original author for openly sharing their research and code.
 
-Agradecimientos al autor original por compartir su investigación y código públicamente.
-## 🚀 Guía de uso
+🚀 Usage Guide
+🔧 1. Opening and configuring the modules
 
-### 🔧 1. Abrir y configurar los módulos
+Before running any module, it is important to open each script (FLD, Airline, ROI, YOLO) and manually adjust the parameters according to the scene:
 
-Antes de ejecutar cualquier módulo, **es importante abrir cada uno de los scripts** (` FLD, Airline`, `Roi`, `Yolo`) y ajustar manualmente los **parámetros según 
-la escena**:
-- Modifica rutas de entrada (videos o imágenes)
-- Ajusta valores de umbral, ROI, tamaños o modelos según necesidad
-- Verifica el sistema operativo y versión de Python (especialmente para Airline)
+Modify input paths (videos or images)
 
-### 🖼 2. Evaluación por imágenes
+Adjust thresholds, ROI settings, sizes, or model parameters as needed
 
-Si deseas evaluar a nivel de imágenes (en vez de video), **asegúrate de cambiar las rutas de entrada** para que apunten a la carpeta con las imágenes.
+Verify the operating system and Python version (especially for the Airline module)
 
----
+🖼 2. Image-level evaluation
 
-## 🗂 Estructura del Proyecto
-├── build/
-├── install/
-├── log/
+If you prefer to perform evaluation using images instead of video, ensure that the input paths are updated to point to the correct image directory.
+
+🗂 Project Structure
+├── compilation/
+├── installation/
+├── logs/
 └── src/
-└── video_extractor/
-├── Ridge__FLD
-├── Ridge_Airline_FLD/
-├── Ridge_Roi/
-└── Ridge_Yolo/
+    └── video_extractor/
+        ├── Ridge_FLD/
+        ├── Ridge_Airline_FLD/
+        ├── Ridge_ROI/
+        └── Ridge_YOLO/
 
-IMPORTANTE: El módulo CRG está compilado para Python 3.11 en Windows, Linux y macOS. Por favor, sigue el tutorial de pybind11 para compilarlo.
-El archivo .cpp se encuentra en: CRG/extractC.
 
-🧪 DATASET SINTÉTICO – ISAAC SIM
+Important:
+The CRG module is compiled for Python 3.11 on Windows, Linux, and macOS.
+Please follow the pybind11 tutorial to compile it.
+The .cpp file is located in: CRG/extractC.
 
-Este proyecto fue evaluado utilizando un conjunto de datos generados de forma sintética en NVIDIA Isaac Sim, complementados con datos reales obtenidos en el entorno Robot@Home2.
+🧪 SYNTHETIC DATASET – ISAAC SIM
 
-Los siguientes enlaces incluyen los resultados de cada módulo (Airline, FLD, ROI, YOLO) junto con sus respectivos Ground Truths, empleados para la evaluación y comparación del desempeño.
+This project was evaluated using a dataset generated synthetically in NVIDIA Isaac Sim, complemented by real data obtained from the Robot@Home2 environment.
 
-Cada carpeta contiene:
+The following links include the results from each module (Airline, FLD, ROI, YOLO) as well as their corresponding Ground Truths, used for benchmarking and performance comparison.
 
-Imágenes originales (images)
+Each folder contains:
 
-Etiquetas y anotaciones (labels)
+Original images (images)
 
-Imágenes con el Ground Truth (outputs)
+Labels and annotations (labels)
 
-📥 Enlace de descarga del dataset sintético (Isaac Sim):
+Images with Ground Truth overlaid (outputs)
+
+📥 Synthetic Dataset (Isaac Sim):
 🔗 https://drive.google.com/drive/folders/1gZvHERa0tMA8oM3BWoNmzE76GrPac45u?usp=drive_link
 
-🤖 DATASET REAL – ROBOT@HOME2
+🤖 REAL DATASET – ROBOT@HOME2
 
-De manera complementaria, se utilizó el dataset real Robot@Home2, organizado bajo la misma estructura que el dataset sintético con el fin de mantener consistencia en los procesos de evaluación.
+Additionally, the project uses the real-world Robot@Home2 dataset, organized using the same structure as the synthetic dataset to maintain consistency throughout the evaluation process.
 
-Cada carpeta incluye:
+Each folder includes:
 
-Imágenes originales (images)
+Original images (images)
 
-Etiquetas y anotaciones (labels)
+Labels and annotations (labels)
 
-Imágenes con el Ground Truth (outputs)
+Images with Ground Truth overlaid (outputs)
 
-📥 Enlace de descarga del dataset Robot@Home2:
+📥 Robot@Home2 Dataset:
 🔗 https://drive.google.com/drive/folders/1dpP8Z00DASQUeKYnOC32W2xYegjifNwW?usp=sharing
 
----
-📂 SessionAIRLINE_Sintético
-📂 SessionAIRLINE_Robot@Home2
-📂 SessionFLD_Sintético
-📂 SessionFLD_Robot@Home2
-📂 SessionROI_Sintético
-📂 SessionROI_Robot@Home2
-📂 SessionROI2_Robot@Home2
-📂 SessionYOLO_Sintético
-📂 SessionYOLO_Robot@Home2
+📂 Available Sessions
 
+The repository includes evaluation sessions for each module under both datasets:
+
+📂 SessionAIRLINE_Synthetic
+
+📂 SessionAIRLINE_Robot@Home2
+
+📂 SessionFLD_Synthetic
+
+📂 SessionFLD_Robot@Home2
+
+📂 SessionROI_Synthetic
+
+📂 SessionROI_Robot@Home2
+
+📂 SessionROI2_Robot@Home2
+
+📂 SessionYOLO_Synthetic
+
+📂 SessionYOLO_Robot@Home2
 
