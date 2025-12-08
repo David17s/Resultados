@@ -41,18 +41,37 @@ Si deseas evaluar a nivel de imágenes (en vez de video), **asegúrate de cambia
 IMPORTANTE: El módulo CRG está compilado para Python 3.11 en Windows, Linux y macOS. Por favor, sigue el tutorial de pybind11 para compilarlo.
 El archivo .cpp se encuentra en: CRG/extractC.
 
-# 🧪 DATASET SINTÉTICO – ISAAC SIM + Robot@Home2
+🧪 DATASET SINTÉTICO – ISAAC SIM
 
-Este proyecto fue evaluado utilizando un conjunto de datos generado de forma **sintética en NVIDIA Isaac Sim**, complementado con datos reales obtenidos en el entorno **Robot@Home2**.  
-En el siguiente enlace se incluyen los **resultados de cada módulo** (Airline, FLD, ROI, YOLO) y los **ground truths** correspondientes para evaluación y comparación.
- 
+Este proyecto fue evaluado utilizando un conjunto de datos generados de forma sintética en NVIDIA Isaac Sim, complementados con datos reales obtenidos en el entorno Robot@Home2.
+
+Los siguientes enlaces incluyen los resultados de cada módulo (Airline, FLD, ROI, YOLO) junto con sus respectivos Ground Truths, empleados para la evaluación y comparación del desempeño.
+
 Cada carpeta contiene:
-- Secuencias de entrada
-- Resultados generados por el módulo correspondiente
-- Archivos `ground truth` para evaluación
 
-📥 **Enlace de descarga del dataset completo y resultados:**  
-🔗 [https://drive.google.com/drive/folders/1S6WOX8VVko_Cj0NhZi_yhRoBnj9b2a92?usp=sharing](https://drive.google.com/drive/folders/1S6WOX8VVko_Cj0NhZi_yhRoBnj9b2a92?usp=sharing)
+Imágenes originales (images)
+
+Etiquetas y anotaciones (labels)
+
+Imágenes con el Ground Truth (outputs)
+
+📥 Enlace de descarga del dataset sintético (Isaac Sim):
+🔗 https://drive.google.com/drive/folders/1gZvHERa0tMA8oM3BWoNmzE76GrPac45u?usp=drive_link
+
+🤖 DATASET REAL – ROBOT@HOME2
+
+De manera complementaria, se utilizó el dataset real Robot@Home2, organizado bajo la misma estructura que el dataset sintético con el fin de mantener consistencia en los procesos de evaluación.
+
+Cada carpeta incluye:
+
+Imágenes originales (images)
+
+Etiquetas y anotaciones (labels)
+
+Imágenes con el Ground Truth (outputs)
+
+📥 Enlace de descarga del dataset Robot@Home2:
+🔗 https://drive.google.com/drive/folders/1dpP8Z00DASQUeKYnOC32W2xYegjifNwW?usp=sharing
 
 ---
 📂 SessionAIRLINE_Sintético
